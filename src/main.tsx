@@ -4,6 +4,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Root from "./routes/root";
 import PokemonPage, { loader as pokemonPageLoader } from "./routes/pokemonPage";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
 	{
@@ -13,12 +17,15 @@ const router = createBrowserRouter([
 	{
 		path: "/pokemon/:pokemonName",
 		element: <PokemonPage />,
-		loader: pokemonPageLoader,
+		loader: pokemonPageLoader(queryClient),
 	},
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
 	<React.StrictMode>
-		<RouterProvider router={router} />
+		<QueryClientProvider client={queryClient}>
+			<RouterProvider router={router} />
+			<ReactQueryDevtools initialIsOpen={true} />
+		</QueryClientProvider>
 	</React.StrictMode>
 );
