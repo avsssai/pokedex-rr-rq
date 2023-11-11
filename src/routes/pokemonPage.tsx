@@ -30,7 +30,7 @@ async function getPokeDetails(
 	return { data, descriptionData };
 }
 
-export const loader =
+/* eslint-disable-line */ export const loader =
 	(queryClient: any) =>
 	async ({ params }: LoaderFunctionArgs) => {
 		const query = pokemonQuery(params.pokemonName as string);

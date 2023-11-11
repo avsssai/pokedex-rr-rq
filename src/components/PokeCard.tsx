@@ -1,4 +1,3 @@
-import React from "react";
 // import Bulbasaur from "../assets/images/1.svg";
 interface Props {
 	name: string;
