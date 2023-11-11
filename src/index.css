@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--primary: #dc0a2d;
+	--type-bug: #a7b723;
+	--type-dark: #75574c;
+	--type-dragon: #7037ff;
+	--type-electric: #f9cf30;
+	--type-fairy: #e69eac;
+	--type-fighting: #c12239;
+	--type-fire: #f57d31;
+	--type-flying: #a891ec;
+	--type-ghost: #70559b;
+	--type-normal: #aaa67f;
+	--type-grass: #74cb48;
+	--type-ground: #dec16b;
+	--type-ice: #9ad6df;
+	--type-poison: #a43e9e;
+	--type-psychic: #fb5584;
+	--type-rock: #b69e31;
+	--type-steel: #b7b9d0;
+	--type-water: #6493eb;
+}
